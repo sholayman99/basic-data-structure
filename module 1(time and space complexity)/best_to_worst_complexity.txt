@@ -1,0 +1,17 @@
+**How do we define Best to Worst in Complexity?**
+
+1. First, assume a value for N (e.g., N = 1000).
+2. Using that N, we estimate operation counts for each time complexity.
+3. Lower operation counts = better performance.
+
+| Name         | Complexity     | Est. Operations (N=1000) |
+|--------------|----------------|---------------------------|
+| Constant     | O(1)           | 1                         |
+| Logarithmic  | O(log N)       | ~10                       |
+| Linear       | O(N)           | 1000                      |
+| Linearithmic | O(N log N)     | ~10,000                   |
+| Quadratic    | O(N²)          | 1,000,000                 |
+| Cubic        | O(N³)          | 1000000000   
+
+**From Best to Worst:**
+O(1) < O(log N) < O(N) < O(N log N) < O(N²)
