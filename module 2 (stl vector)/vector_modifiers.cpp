@@ -11,7 +11,7 @@ int main()
     vector<int> v = v2; // Time complexity: O(n)
 
     // ✅ Overwrite v with v3 (v = [4, 5])
-    // Time complexity: O(n)
+    // Time complexity: O(n) if both v are different size if same then O(1)
     v.assign(v3.begin(), v3.end());
 
     // ✅ Push an element to the back (v = [4, 5, 6])
@@ -23,7 +23,7 @@ int main()
     v.pop_back();
 
     // ✅ Insert 1 at beginning (v = [1, 4, 5])
-    // Time complexity: O(n)
+    // Time complexity: O(n+k)
     v.insert(v.begin() + 0, 1);
 
     // ✅ Insert multiple elements from v4 into v at position 1
@@ -46,12 +46,28 @@ int main()
     // Time complexity: O(n)
     v.erase(v.begin() + 3, v.begin() + 5);
 
-    // ✅ Print final contents
+
+    vector<int>v_new = {3,4,5,3,2,3};
+    replace(v_new.begin(),v_new.end()-1,3,50);
+    replace(v_new.begin(),v_new.end(),3,50);
+      // ✅ Print final contents
     // Time complexity: O(n)
-    for (int x : v)
+    for (int x : v_new)
     {
         cout << x << " ";
     }
+
+    auto it = find(v_new.begin(),v_new.end(),5);
+    cout << *it << endl;
+
+    if(it == v.end())
+    {
+        cout << "found" << endl;
+    }
+    else{
+         cout << " not found" << endl;
+    }
+  
 
     return 0;
 }
