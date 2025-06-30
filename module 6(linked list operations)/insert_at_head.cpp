@@ -17,7 +17,7 @@ public:
  * Inserts a new node at the head of the linked list.
  * Uses pass-by-reference to modify the original head.
  */
-void insert_at_head(Node* &head, int val)
+void insert_at_head(Node* &head, int val)  // Complexity: O(1)
 {
     Node* newnode = new Node(val);
     newnode->next = head;
