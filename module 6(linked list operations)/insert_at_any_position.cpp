@@ -35,6 +35,10 @@ void insert_at_any_position(Node *&head, int idx, int val)  // Complexity: O(1);
     for(int i = 0; i < idx - 1; i++)
     {
         temp = temp->next;
+        if(temp == NULL)
+        {
+            return;
+        }
     }
 
     // Insert newnode after temp
