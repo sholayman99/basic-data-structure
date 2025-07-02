@@ -1,0 +1,1 @@
+cout << tmp->val << endl;
