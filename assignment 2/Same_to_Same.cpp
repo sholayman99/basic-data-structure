@@ -29,24 +29,28 @@ void insert_at_tail(Node *&head, Node *&tail, int val)
 }
 void find_same(Node *head1, Node *head2)
 {
-    int same = 1;
-    for (Node *i = head1, *j = head2; i != NULL && j != NULL; i = i->next, j = j->next)
+    Node* i=head1;
+    Node* j = head2;
+
+    while (i != NULL && j != NULL)
     {
-      if(i->val != j->val)
-      {
-        same = 0;
-        break;
-      }  
+        if (i->val != j->val)
+        {
+            cout << "NO" << endl;
+            return;
+        }
+        i = i->next;
+        j = j->next;
     }
-    if(same==0)
+    if (i == NULL && j == NULL)
+    {
+        cout << "YES" << endl;
+    }
+    else
     {
         cout << "NO" << endl;
     }
-    else{
-        cout << "YES" << endl;
-    }
 }
-
 
 int main()
 {
