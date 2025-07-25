@@ -44,6 +44,7 @@ public:
         {
             tail = NULL;
         }
+        return;
     };
 
     int front()
