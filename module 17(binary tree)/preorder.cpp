@@ -15,6 +15,15 @@ public:
     }
 };
 
+void preorder(Node *root)
+{
+    if (root == NULL)
+        return;
+
+    cout << root->val << " ";
+    preorder(root->left);
+    preorder(root->right);
+}
 
 int main()
 {
@@ -30,6 +39,6 @@ int main()
     a->left = c;
     b->left = d;
     b->right = e;
-    
+    preorder(root);
     return 0;
 }
